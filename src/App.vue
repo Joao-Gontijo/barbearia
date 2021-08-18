@@ -1,30 +1,29 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div>
+    <Cabecalho/>
   </div>
-  <router-view/>
 </template>
 
+<script>
+
+import Cabecalho from '@/components/CabecalhoRotas.vue'
+
+export default {
+  name: 'cabecalho',
+  components: {
+    Cabecalho
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+html{
+  background-color: rgb(22, 7, 137) !important;
 }
-
-#nav {
-  padding: 30px;
+label, b, p{
+  color: aliceblue;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+button, table{
+  margin-top: 10px !important;
 }
 </style>
