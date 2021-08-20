@@ -9,7 +9,13 @@
             <input class="input" type="text">
             <label>Barbeiro</label>
             
-            <div class="dropdown">
+            <div class="select">
+                <select>
+                    <option>Selecione o Barbeiro</option>
+                    <option v-for="barbeiro in barbeiros" :key="barbeiro.id">{{barbeiro.nome}}</option>
+                </select>
+            </div>
+            <!-- <div class="dropdown">
                 <div class="dropdown-trigger">
                     <button class="button" @click="ligarDropdown(), listar()" aria-haspopup="true" aria-controls="dropdown-menu">
                     <span>Dropdown button</span>
@@ -27,7 +33,7 @@
                     </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
