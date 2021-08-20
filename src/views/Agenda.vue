@@ -8,7 +8,7 @@
             <label>Campo 3</label>
             <input class="input" type="text">
             <label>Barbeiro</label>
-            
+            <br>
             <div class="select">
                 <select>
                     <option>Selecione o Barbeiro</option>
@@ -47,6 +47,9 @@ export default {
         return{
             barbeiros:[]
         }
+    },
+    mounted(){
+        this.listar();
     },
     methods:{
         ligarDropdown() {
