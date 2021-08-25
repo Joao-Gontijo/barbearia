@@ -45,6 +45,7 @@
 <script>
 
     // import Pessoa from '@/services/pessoas'
+    // import Login from '@/services/login'
 
     export default {
         name: "login",
@@ -83,7 +84,7 @@
                     this.errors.push('Senha obrigatória');
                 } 
                 else if(!this.validSenha(this.pessoa.senha)){
-                    this.erros.push('Email ou senha incorretos')
+                    this.errors.push('Email ou senha incorretos')
                 }
 
                 if(!this.errors.length){
@@ -100,6 +101,13 @@
                     return false;
                 }
             },
+            validSenha: function(senha){
+                if(senha === '1234'){
+                    return true;
+                } else{
+                    return false;
+                }
+            }
             // buscar(email){
             //     Pessoa.buscar(email).then(resposta => {
             //         this.pessoa = resposta;

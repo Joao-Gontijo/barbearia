@@ -54,8 +54,15 @@ export default {
             servicos:[]
         }
     },
+    // computed:{
+    //     listar: function(){
+    //         return Servico.listar().then(resposta => {
+    //            this.servicos = resposta.data;
+    //         })
+    //     }
+    // },
     mounted(){
-        this.listar()
+        this.listar();
     },
     methods:{
         listar(){

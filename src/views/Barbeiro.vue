@@ -76,7 +76,7 @@ import Barbeiro from '@/services/barbeiros'
       }
     },
     mounted(){
-      this.listar()
+      this.listar();
     },
 
     methods:{
@@ -84,7 +84,7 @@ import Barbeiro from '@/services/barbeiros'
       listar(){
         Barbeiro.listar().then(resposta => {    
         this.barbeiros = resposta.data;
-      })
+        })
       },
       listarServicos(){
           alert("Em construção");

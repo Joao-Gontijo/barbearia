@@ -15,25 +15,6 @@
                     <option v-for="barbeiro in barbeiros" :key="barbeiro.id">{{barbeiro.nome}}</option>
                 </select>
             </div>
-            <!-- <div class="dropdown">
-                <div class="dropdown-trigger">
-                    <button class="button" @click="ligarDropdown(), listar()" aria-haspopup="true" aria-controls="dropdown-menu">
-                    <span>Dropdown button</span>
-                    <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                    </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                    <div class="dropdown-content">
-                    <div v-for="barbeiro in barbeiros" :key="barbeiro.id">
-                        <a href="#" class="dropdown-item">
-                            {{barbeiro.nome}}
-                        </a>
-                    </div>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 </template>

@@ -32,6 +32,7 @@
 <script>
 
   import Pessoa from '@/services/pessoas'
+  // import axios from 'axios';
   
   export default{
 
@@ -128,12 +129,26 @@
       },
 
       salvar(){
+        // const data = {
+        //   nome: this.pessoa.nome,
+        //   cpf: this.pessoa.cpf,
+        //   email: this.pessoa.email,
+        //   senha1: this.pessoa.senha,
+        //   senha2: this.pessoa.senha,
+        // }
+
+        // axios.post('http://localhost:8080/barbearia/cliente', data).then(res => {
+        //   console.log(res);
+        // }).catch(err => {
+        //   console.log(err);
+        // })
         if(this.senha1 === this.senha2){
 
           this.pessoa.senha = this.senha1
           if(!this.pessoa.id){
             Pessoa.salvar(this.pessoa)
             alert('salvo com sucesso! ')
+            console.log(this.pessoa);
             this.pessoa = {}
             this.senha1=""
             this.senha2=""
@@ -150,6 +165,7 @@
         }else {
           alert("As senhas não combinam")
         }
+       
       },
 
       editar(pessoa){

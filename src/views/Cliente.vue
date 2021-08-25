@@ -78,7 +78,7 @@
       }
     },
     mounted(){
-      this.listar()
+      this.listar();
     },
 
     methods:{
